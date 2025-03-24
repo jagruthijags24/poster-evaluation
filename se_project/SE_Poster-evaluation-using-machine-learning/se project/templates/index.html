@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Evaluation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Poster Evaluation</h1>
+    </header>
+    <main>
+        <section class="upload-section">
+            <h2>Upload Poster Image</h2>
+            <form id="upload-form" method="POST" enctype="multipart/form-data">
+                <input type="file" name="poster" id="posterImage" accept="image/*" required>
+                <button type="submit">Submit Poster</button>
+            </form>
+        </section>
+        <section class="result-section" id="resultSection">
+            <h2>Evaluation Results</h2>
+            <div class="result-container">
+                <div class="result-item">
+                    <strong>Average RGB:</strong>
+                    <span id="averageRGB"></span>
+                </div>
+                <div class="result-item">
+                    <strong>Indentation Evaluation:</strong>
+                    <span id="indentationResult"></span>
+                </div>
+                <div class="result-item">
+                    <strong>Poster Size:</strong>
+                    <span id="sizeDimensionResult"></span>
+                </div>
+                <div class="result-item">
+                    <strong>Image Clarity Score:</strong>
+                    <span id="clarityResult"></span>
+                </div>
+                <div class="result-item">
+                    <strong>Clutter Score:</strong>
+                    <span id="clutterResult"></span>
+                </div>
+                <div class="result-item">
+                    <strong>Extracted Text:</strong>
+                    <span id="extracted"></span>
+                </div>
+                <div class="result-item">
+                    <strong>QR Code Data:</strong>
+                    <span id="qrCodeData"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
